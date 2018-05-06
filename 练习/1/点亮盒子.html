@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+    button{
+        width: 120px;
+        height: 80px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .current{
+        background: gold; 
+    }
+    </style> 
+</head>
+<body>
+    <button>按钮一</button>
+    <button>按钮二</button>
+    <button>按钮三</button>
+    <button>按钮四</button>
+    <button>按钮五</button>
+<script>
+var but=document.getElementsByTagName("button");
+for(i=0;i<but.length;i++){
+   but[i].onmouseover=function(){
+       for(j=0;j<but.length;j++){
+           but[j].className=" ";
+       }
+     this.className="current";
+   }
+}
+
+
+
+</script>
+</body>
+</html>

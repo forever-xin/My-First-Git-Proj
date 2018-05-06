@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+<style>
+    button{
+        margin: 10px;
+    }
+div{
+    width: 200px;
+    height: 200px;
+    background: pink;
+}
+ 
+.hos{
+    display: block;
+}
+.hide{
+    display: none;
+}
+</style>
+</head>
+<body>
+    <button id="box">隐藏</button>
+<div>1111</div>
+<script>
+    //获取事件
+  var box = document.getElementById("box");
+  var div=document.getElementsByTagName("div")[0];
+   //绑定事件
+   //判断box里面innerhtml的值，如果为隐藏就隐藏盒子，如果是显示就显示盒子
+   box.onclick=function(){
+       //书写事件驱动程序
+//   div.className="hide";
+//   //修改文字 
+//   box.innerHTML="显示";
+if(this.innerHTML==="隐藏"){
+    div.className="hide";
+    box.innerHTML="显示";
+    }else{
+        div.className="hos";
+        box.innerHTML="隐藏";
+
+}
+   }
+
+
+</script>
+     
+</body>
+</html>

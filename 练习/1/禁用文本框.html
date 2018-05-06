@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     账号:<input type="text" value="nihao">  <button>禁用</button><br><br>
+     密码:<input type="password"value="11111">
+     <script>
+        //  1。获取事件源和相关元素
+     var input=document.getElementsByTagName("input")[0];
+     var button=document.getElementsByTagName("button")[0];
+
+        //  2.绑定事件
+        button.onclick=function(){
+             //  3.书写驱动事件程序
+             input.disabled="111";
+        }
+        //  3.书写驱动事件程序
+     
+     
+     </script>
+</body>
+</html>

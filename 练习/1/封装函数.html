@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+    //求斐波那约数列第n项
+
+    alert(getvalue(12));
+    function   getvalue(n){
+        var num1=1;
+        var  num2=1;
+        for(var i=3;i<=n;i++){
+            var temp=num2;
+            num2=num1+num2;
+            num1=temp;
+
+        }
+        return num2;
+    }
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

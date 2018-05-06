@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn"/>
+    <div id="dv"></div>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+<script src="js/jquery-1.12.2.min.js"></script>
+
+
+    
+ 
+
+
+<!-- dom -->
+    <!-- <script>
+      document.getElementById("btn").onclick=function(){
+
+          var dvobj =document.getElementById("dv");
+          dvobj.style.width="200px";
+          dvobj.style.height="100px"
+          dvobj.style.backgroundColor="red";
+      }; -->
+    <!-- // jQuery -->
+    <script>
+    $("#btn").click(function () {
+        $("#dv").css({"width":"100px","height":"100px","background-color":"yellow"});
+    });
+    
+    
+    </script>
+    <!-- <script>
+        $("#btn").click(function(){
+            $("p").text("wwwww");
+        });
+    </script> -->
+    
+    
+    <!-- </script> -->
+</body>
+</html>

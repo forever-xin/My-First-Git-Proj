@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 0 none;
+            outline-style: none;
+            background: #cccccc;
+            border: dashed  green 1px ;
+        }
+
+.miss{
+    border: 0 none;
+    outline-style:none;
+    border-bottom-style: dashed ;
+    border-color:red;
+    border-bottom-width: 1px;
+   
+    
+}
+.box:focus{
+    background: red;
+
+}
+.misss{
+    background: url("search.png") no-repeat right;
+
+}
+    </style>
+</head>
+<body>
+    <label for="box">用户名</label><input type="text" class="box" id="box">
+    <br>
+    <br>
+    邮 &nbsp;&nbsp;箱:<input type="text"class="miss">
+    <br>
+    <br>
+    搜 &nbsp;&nbsp;索:<input type="text" class="misss">
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+    <style>
+        .cls{
+          background-color:black;
+        }
+    
+    
+    </style>
+</head>
+
+<body>
+    <input type="button" value="关灯" id="btn">
+    <script>
+     document.getElementById("btn").onclick=function(){
+         var body= document.body;
+         if(body.className=="cls"){
+             body.className="";
+             this.value="关灯";
+         }else{
+             body.className="cls";
+             this.value="开灯";
+         }
+     }
+    
+    
+    </script>
+    
+</body>
+</html>

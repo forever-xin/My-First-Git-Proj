@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        border: 1px red solid;
+    }
+    .bix{
+        border: 1px green solid;
+    }
+    input{
+        outline-style: none;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" onblur="fn(this)"/><br>
+    <input type="password" onblur="fn(this)"/>
+  <script>
+  function fn(aaa){
+      if(aaa.value.length < 6||aaa.value.length > 12){
+          aaa.className="box";
+      }else{
+          aaa.className="bix";
+      }
+  }
+  
+  
+  
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.top{
+    background: pink;
+    height: 80px;
+    
+
+}
+.w{
+    width: 1210px;
+    height: 80px;
+    position: relative;
+    margin: 10px auto;
+}
+img{
+    width: 1210px;
+    height: 80px;
+    background-color: blue;
+}
+a{
+    position: absolute;
+    text-decoration: none;
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    font: 700 14px;
+      line-height: 20px;
+text-align: center;
+}
+.hide{
+    display: none;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div class="top"id="tops">
+    <div class="w">
+        <img src="1.jpg" alt="">
+        <a href="#" id="box">x</a>
+    </div>
+</div>
+<script>
+
+
+   var box= document.getElementById("box");
+   var tops=document.getElementById("tops")
+   box.onclick=function(){
+    // tops.className+=" hide";//保留原类名
+    // tops.className="hide";//替换旧类名
+    tops.style.display="none";
+   }
+  
+</script>
+
+
+    
+</body>
+</html>
