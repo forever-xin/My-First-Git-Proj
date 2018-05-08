@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .cls{
+        width: 100px;
+        height: 200px;
+        background-color: red;
+    }
+    .cls2{
+        border: 3px solid yellow;
+
+    }
+    </style>
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script>
+    
+    $(function(){
+        $("#btn").click(function(){
+            // $("#dv").css("width","200px");
+            // $("#dv").css("height","200px");
+            // $("#dv").css("backgroundColor","hotpink");
+            // $("#dv").css("border","1px solid red");
+
+        //   $("#dv").css("width","300px").css("height","300px").css("backgroundColor","hotpink").css("border","1px solid red");
+        //  var json={"width":"200px","height":"200px","backgroundColor":"hotpink","border":"1px solid red"};
+        //  $("#dv").css(json);
+        $("#dv").addClass("cls cls2");
+        })
+    })
+
+    
+    </script>
+
+</head>
+<body>
+
+<input type="button"  value="显示效果" id="btn"/>
+<div id="dv"></div>
+
+    
+</body>
+</html>

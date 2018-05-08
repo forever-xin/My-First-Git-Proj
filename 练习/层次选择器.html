@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+div{
+    width: 500px;
+    height: 300px;
+    border: 2px solid green;
+
+}
+</style>
+<script src="js/jquery-1.12.2.min.js"></script>
+<script>
+    $(function(){
+
+    $("#btn").click(function(){
+        $("#dv span").css("backgroundColor","red");
+    });
+    });
+</script>
+
+</head>
+<body>
+    <input type="button" value="显示效果" id="btn"/>
+    <div id="dv">
+    <span>这是第一个span</span>
+    <ul>
+    <li>第一个li</li>
+    <li>第二个li
+        <span>第二个li中的span</span>
+        <span>第二个li中的span</span>
+
+    </li>
+    <li>第三个li</li>
+    </ul>
+    <span>第二个span</span>
+    <span>第三个span</span>
+    </div>
+
+
+    
+</body>
+</html>
