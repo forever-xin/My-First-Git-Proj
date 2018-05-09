@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.2.min.js"></script>
+<script>
+    var arr=[
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"aaaa","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+        {"name":"ccccc","href":"www.baidu.com"},
+    ];
+
+
+    $(function(){
+        $("#btn").click(function(){
+            var table=$("<table border='1' cellspacing='0' cellpadding='0'></table>");
+            $("#dv").append(table);
+            for(var i=0; i<arr.length;i++){
+                var dt=arr[i];
+                var tr=$("<tr></tr>");
+                 table.append(tr);
+                 var td1=$("<td>"+dt.name+"</td>");
+                table.append(td1);
+                var td2=$("<td><a href='"+dt.href+"'>"+dt.name+"</a></td>");
+                tr.append(td2);
+
+            }
+        })
+    })
+</script>
+     
+
+</head>
+<body>
+    <input type="button" value="创建一个表格" id="btn">
+    <div id="dv"></div>
+    
+</body>
+</html>

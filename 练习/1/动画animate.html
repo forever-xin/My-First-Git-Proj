@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- <style>
+    img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+    </style> -->
+    
+<script src="js/jquery-1.12.2.min.js"></script>
+<script>
+$(function(){
+   $("#btn").click(function(){
+       var ulobj=$("<ul style='list-style-type:none;cursor:pointer'></ul>");
+       $("#dv").append(ulobj);
+       $("<li>1111</li><li>2222</li><li>3333</li><li>4444</li><li>5555</li><li>666</li>").appendTo(ulobj).mouseenter(function(){
+           $(this).css("backgroundColor","green");
+       }).mouseleave(function(){
+        $(this).css("backgroundColor","");
+       }).click(function(){
+           $(this).css("color","pink").css("fontfamily","全新硬笔行书简");
+       })
+   })
+    // $("#im").animate({"height":"300px","width":"300px","top":"100px","left":"100px"},3000).animate({"height":"30px","width":"30px","top":"600px","left":"10px"},300)
+})
+
+
+
+</script>    
+</head>
+<body>
+    <!-- <img src="timg.jpeg" alt="" id="im"/> -->
+
+    <input type="button" value="创建列表" id="btn"/>
+    <div id="dv"></div>
+    
+</body>
+</html>

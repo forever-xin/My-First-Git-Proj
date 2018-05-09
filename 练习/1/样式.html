@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.2.min.js"></script>
+     <script>
+     $(function(){
+        //  $("#three").click(function(){
+            //  $(this).next().css("backgroundColor","red");
+            // $(this).prev().css("backgroundColor","red");
+            // $(this).nextAll().css("backgroundColor","red");
+            // $(this).siblings().css("backgroundColor","red");
+            $("ul>li").mouseenter(function(){//鼠标进入事件
+                $(this).css("backgroundColor","red").siblings("li").css("backgroundColor","");
+
+            }).mouseleave(function(){//鼠标离开事件
+            $(this).parent().find("li").css("backgroundColor","");
+
+            }).click(function(){
+                $(this).prevAll("li").css("backgroundColor","yellow");
+                $(this).nextAll("li").css("backgroundColor","blue");
+            })
+         })
+  
+     
+     </script>
+
+</head>
+<body>
+    <ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+
+
+
+
+
+
+    </ul>
+    
+</body>
+</html>
