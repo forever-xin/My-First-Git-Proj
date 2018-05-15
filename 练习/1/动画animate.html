@@ -22,7 +22,8 @@
 <script src="js/jquery-1.12.2.min.js"></script>
 <script>
 $(function(){
-   $("#btn").click(function(){
+
+   $("#btn").click(function(){//根据id选择器获取按钮，添加点击事件
        var ulobj=$("<ul style='list-style-type:none;cursor:pointer'></ul>");
        $("#dv").append(ulobj);
        $("<li>1111</li><li>2222</li><li>3333</li><li>4444</li><li>5555</li><li>666</li>").appendTo(ulobj).mouseenter(function(){

@@ -19,7 +19,7 @@
             }).mouseleave(function(){//鼠标离开事件
             $(this).parent().find("li").css("backgroundColor","");
 
-            }).click(function(){
+            }).click(function(){//点击事件
                 $(this).prevAll("li").css("backgroundColor","yellow");
                 $(this).nextAll("li").css("backgroundColor","blue");
             })
