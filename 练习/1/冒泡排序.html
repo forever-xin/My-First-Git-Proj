@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+<body>
+      <script>
+         
+       var temp;
+         var Array=[1,2,5,3,4];
+       for(i=0;i<Array.length-1;i++){
+           for(j=0;j<Array.length-1-i;j++){
+               if(Array[j]>Array[j+1]){
+                  temp=Array[j];
+                  Array[j]=Array[j+1];
+                  Array[j+1]=temp;
+                  console.log(Array);
+
+               }
+           }
+       }
+        
+
+      
+
+
+
+      </script>
+      
+      
+    
+</body>
+</html>
