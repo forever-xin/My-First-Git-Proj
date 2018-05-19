@@ -1,3 +1,6 @@
+
+
+（一）
 ##### 1.认识大大前端
 
 本人对于前端的了解就是
@@ -90,17 +93,11 @@ Webstorm  重量级    太过智能。
 
 ◆换行标签   <br />
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.png)
-
 ◆水平线标签  <hr />
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.png)
-
-7. 2
+7.2
 
 <p>文本内容<p>
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.png)
 
 特点：上下自动生成空白行。<br>换行不会生成空白行。
 
@@ -110,27 +107,17 @@ Webstorm  重量级    太过智能。
 
 **h1** **在一个页面里只能出现一次。**
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.png)
-
 **文本标签**
 
 **<font>****文本内容</font>**
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.png)
 
 **文本格式化标签**
 
  **文本加粗标签  <strong></strong>  <b></b>**  **工作里尽量使用strong**
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.png)
-
- 
-
 **文本倾斜标签**
 
 <em></em>     <i></i>     工作里尽量使用em
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image008.png)
 
  
 
@@ -138,17 +125,11 @@ Webstorm  重量级    太过智能。
 
 **<del></del>     <s></s>**   **工作里尽量使用del**
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image010.png)
-
- 
-
 ◆注意：之所以工作里使用<strong></strong> <em></em> <del></del>
 
 <ins></ins>  是因为更有语义化。
 
 7.3图片标签
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image014.png)
 
 Src    图片的来源   必写属性
 
@@ -170,29 +151,17 @@ Height  图片高度
 
 ◆文件和图片（html文档）在同一个目录(文件夹) ，直接写文件名。
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image016.png)
-
- 
-
 ◆图片（html文档）在文件在下一级目录里。文件夹名称+/+图片（html）名称
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image018.png)
 
 ◆图片（html）在文件的上一级目录里，..+/+图片（html）名称
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image020.png)
-
 ◆图片在文件的上一级的其他目录里，../文件夹名称/图片名称
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image022.png)
 
 ★总结：找到下一级目录（文件夹）的图片（文件）用 /
 
 ​        跳出当前目录使用../
 
 ##### 8.超链接
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image026.png)
 
 href   去往的路径（跳转的页面）必写属性
 
@@ -206,11 +175,7 @@ Target=”_blank”   打开新页面（自身页面不关闭，打开一个新�
 
 9.1.先定义一个锚点
 
-​    ![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image028.png)
-
 9.2.超链接到锚点
-
-   ![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image030.png)
 
 ##### #10.列表
 
@@ -225,8 +190,6 @@ Target=”_blank”   打开新页面（自身页面不关闭，打开一个新�
 <li></li>
 
 </ul>
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image040.png)
 
 type=”square”      小方块
 
@@ -248,8 +211,6 @@ Type=”circle”      空心小圆圈
 
 </ol>
 
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image042.png)
-
 ◆type=”1,a,A,i,I” type的值可以为1,a,A,i,I
 
 start=”3”  决定了开始的位置。
@@ -265,8 +226,6 @@ start=”3”  决定了开始的位置。
  <dd></dd>   解释标题
 
 </dl>
-
-![img](file:////Users/caihuixin/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image044.png)
 
 ## 
 
