@@ -1,3 +1,22 @@
 body{
-    background-color: pink;
+
+}
+header{
+	width: 1300px;
+	height: 100px;
+	background-color: pink;
+	margin: 0 auto;
+	padding-top:30px;
+}
+.logo{
+	width: 195px;
+	height: 42px;
+	
+}
+.logo a{
+	display:block;
+	width: 195px;
+	height: 42px;
+	background: url(../images/logo.png) no-repeat;
+	text-indent: -990px;
 }
