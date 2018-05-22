@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #ff3040;
+            transition: all 1s;
+            margin: 200px auto;
+            transform-origin: 50px 50px;
+            /*backface-visibility: hidden; 如果是背面就隐藏掉*/
+        }
+
+        div:hover {
+            /* width: 500px;*/
+            background-color: skyblue;
+            /*  height: 50px;*/
+            /*transform: translate(300px);代表X轴*/
+            /*transform: translate(300px,500px); 代表X轴,代表Y轴*/
+            /*transform: translate(50%,50%); 相对于自身百分比*/
+            /*transform: scale(0.9);  大于等于1.01放大 等于1不变  小于等于0.99缩小*/
+            /*transform: rotate(60deg); 正值的时候顺时针 负值的时候逆时针*/
+            /*transform: rotate(130deg); 正值的时候顺时针 负值的时候逆时针*/
+            /*transform: skew(0deg,30deg); 正值的时候负方向斜切  负值的时候正方向斜切*/
+            /*transform: rotateX(-60deg);*/
+            /*transform: rotateY(60deg);*/
+            /*transform: rotateZ(-60deg);*/
+            /*transform: translate3d(0, 0,300px);*/
+            transform: rotateY(180deg);
+
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

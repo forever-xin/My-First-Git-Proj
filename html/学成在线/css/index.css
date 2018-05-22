@@ -146,7 +146,7 @@ nav li a:hover {
 	left: 50%;
 	/* margin-left: -88px;  == 下面 */
 	transform: translate(-50%);
-
+	
 	bottom: 15px;
 }
 .circle i {
@@ -158,8 +158,10 @@ nav li a:hover {
 	border-radius: 6px;
 	cursor: pointer;
 	transition: all 0.4s;
+	
 }
 .circle i:hover {
 	width: 20px;
 	background-color: #fff;
+
 }
