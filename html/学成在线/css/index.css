@@ -40,3 +40,53 @@ nav li a{
 nav li a:hover{
 	border-bottom:2px solid #00a4ff;
 }
+.search{
+	width: 410px;
+	height: 40px;
+	background-color: red;
+	float: left;
+    margin-left: 50px;
+}
+.search input{
+	width: 361px;
+	height: 40px;
+	border: 1px solid #00a4ff;
+	outline: none;/* 轮廓线 */
+	padding-left: 10px;
+	float: left;
+	
+}
+.search button{
+	width: 49px;
+	height: 40px;
+	float: left;
+	border: 0;
+	outline: none;/* 轮廓线 */
+	background: url("../images/fa-search.png")no-repeat;
+}
+.personal{
+	float:  right;
+	height: 40px;
+	line-height: 40px;
+	widows: 200px;
+}
+.personal dt, .personal dd{
+	float: left;
+}
+.personal s {
+	position: relative;
+	/* padding: 20px; */
+	padding: 0 20px;
+	text-decoration: none;
+}
+.personal s::before {
+	content: "";
+	display: block;  /* 因为伪元素默认的是行内元素 */
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	right: 15px;
+	top: 0;
+}
