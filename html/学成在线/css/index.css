@@ -1,5 +1,5 @@
 body{
-
+	background-color: #f3f5f7;
 }
 header{
 	width: 1300px;
@@ -11,7 +11,7 @@ header{
 .logo{
 	width: 195px;
 	height: 42px;
-	
+	float: left;
 }
 .logo a{
 	display:block;
@@ -19,4 +19,24 @@ header{
 	height: 42px;
 	background: url(../images/logo.png) no-repeat;
 	text-indent: -990px;
+	overflow: hidden;
+}
+nav{
+	float: left;
+	margin-left: 20px;
+}
+nav li{
+	float: left;
+	height: 40px;
+	line-height:40px;
+	padding: 0 10px;
+}
+nav li a{
+	display: block;
+	height: 40px;
+	size: 5px;
+	font-size: 18px;
+}
+nav li a:hover{
+	border-bottom:2px solid #00a4ff;
 }
