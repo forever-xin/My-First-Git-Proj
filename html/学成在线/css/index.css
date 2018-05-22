@@ -1,76 +1,76 @@
-body{
+body {
 	background-color: #f3f5f7;
+
 }
-header{
+header {
 	width: 1300px;
 	height: 100px;
-	background-color: pink;
+	/* background-color: pink; */
 	margin: 0 auto;
-	padding-top:30px;
+	padding-top: 30px;
 }
-.logo{
+.logo {
 	width: 195px;
 	height: 42px;
+	/* background-color: purple; */
 	float: left;
 }
-.logo a{
-	display:block;
-	width: 195px;
-	height: 42px;
-	background: url(../images/logo.png) no-repeat;
-	text-indent: -990px;
-	overflow: hidden;
+.logo a {
+  display: block;
+  width: 195px;
+  height: 42px;
+  background: url(../images/logo.png) no-repeat;
+  text-indent: -990px;/*   隐藏链接里面的文字 */
+  overflow: hidden;  /* 这句话加上想必也是极好的 */
 }
-nav{
+nav {
 	float: left;
 	margin-left: 20px;
 }
-nav li{
+nav li {
 	float: left;
 	height: 40px;
-	line-height:40px;
-	padding: 0 10px;
+	line-height: 40px;
+	margin-left: 25px;
 }
-nav li a{
+nav li a {
 	display: block;
 	height: 40px;
-	size: 5px;
 	font-size: 18px;
+	padding: 0 10px;
 }
-nav li a:hover{
-	border-bottom:2px solid #00a4ff;
+nav li a:hover {
+	border-bottom: 2px solid #00a4ff;
 }
-.search{
+.search {
 	width: 410px;
 	height: 40px;
-	background-color: red;
+	background-color: purple;
 	float: left;
-    margin-left: 50px;
+	margin-left: 160px;
 }
-.search input{
+.search input {
 	width: 361px;
 	height: 40px;
 	border: 1px solid #00a4ff;
-	outline: none;/* 轮廓线 */
+	outline: none;  /* 轮廓线 */
 	padding-left: 10px;
 	float: left;
-	
 }
-.search button{
+.search button {
 	width: 49px;
 	height: 40px;
-	float: left;
 	border: 0;
-	outline: none;/* 轮廓线 */
-	background: url("../images/fa-search.png")no-repeat;
+	outline: none;
+	float: left;
+	background: url(../images/fa-search.png) no-repeat;
 }
-.personal{
-	float:  right;
+.personal {
+	float: right;
 	height: 40px;
 	line-height: 40px;
-	widows: 200px;
 }
-.personal dt, .personal dd{
+.personal dt, .personal dd {
 	float: left;
 }
 .personal s {
@@ -89,4 +89,77 @@ nav li a:hover{
 	position: absolute;
 	right: 15px;
 	top: 0;
+}
+.personal span img {
+	border-radius: 50%;
+	margin-right: 10px;
+	transition: all 0.6s;
+}
+.personal span img:hover {
+	transform: rotate(-360deg);
+}
+.banner{
+	height: 420px;
+	background-color: #1c036c;
+}
+.inner{
+	height: 420px;
+	position: relative;
+}
+.subnav{
+	position: absolute;
+	width: 190px;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 190px;
+	background-color:rgba(0,0,0,.3);
+
+}
+.subnav li {
+	padding-left:20px;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+}
+.subnav a {
+	font-size: 14px;
+	color: #fff;
+	display: block;
+
+}
+.subnav a:hover {
+	color: #00b4ff;
+}
+
+
+.subnav span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+.circle {
+	width: 176px;
+	height: 20px;
+	/* background-color: #fff; */
+	position: absolute;
+	left: 50%;
+	/* margin-left: -88px;  == 下面 */
+	transform: translate(-50%);
+
+	bottom: 15px;
+}
+.circle i {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: rgba(255, 255, 255, 0.4);
+	margin: 0 5px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.circle i:hover {
+	width: 20px;
+	background-color: #fff;
 }
