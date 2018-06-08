@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //第一种
+        // for (i = 1; i <= 9; i++) {
+        //     for (j = 1; j <= i; j++) {
+        //         document.write(j + "*" + i + "=" + i * j + "&nbsp");
+        //     }
+        //     document.write("<br>");
+        // }
+
+document.write("<table border=1>");
+    for(i=1;i<=9;i++){
+        document.write("<tr>");
+        for(j=1;j<=i;j++){
+            document.write("<td>")
+            document.write(j + "*" + i + "=" + i * j + "&nbsp");
+            document.write("</td>")
+        }
+        document.write("</tr>");
+    }
+           
+  document.writr("</table>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //         document.write("<table border='1'>");
+        //            for(i=1;i<=9;i++){
+        //                document.write("<tr>");
+        //                 for(j=1;j<=i;j++){
+        //                     document.write("<td>")
+        //                         document.write(j+"*"+i+"="+i*j);
+        //                     document.write("</td>")
+        //                 }
+        //                 document.write("</tr>");
+        //            }
+        //    document.write("</table>");
+    </script>
+</body>
+
+</html>
