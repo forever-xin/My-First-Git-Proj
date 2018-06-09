@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    //      var array = [10, 20, 30, 40, 50];
+    //    //循环的目的是控制交换的次数
+    //    for (var i = 0; i < array.length / 2; i++) {
+    //      //先把第一个元素的值放在第三方变量中
+    //      var temp = array[i];
+    //      array[i] = array[array.length - 1 - i];
+    //      array[array.length - 1 - i] = temp;
+    //    }
+    //    console.log(array);
+
+var array =[1,2,3,4,5];
+for(var i=0;i<array.length/2;i++){
+    var temp=array[i];
+    array[i]=array[array.length-1-i];
+    array[array.length-1-i]=temp;
+
+}
+console.log(array);
+        </script>
+</body>
+</html>
