@@ -389,3 +389,9 @@ Continue：在循环中如果遇到continue关键字，直接开始下一次循�
 var 变量名 =new Array（）；
 
 2.通过字面量的方式创建数组
+
+//通过过早函数的方式定义一个数组
+
+var array=new Array（）；//没有数据，空数组
+
+Console.log(Array);空数组
