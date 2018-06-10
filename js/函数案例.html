@@ -70,13 +70,24 @@
     //      } return max;
     //  }  
     //  console.log(getMax(1,2,3));
-     function  getZ(x){
-         zhishu=0;
-         if(x%x==0&&x%1==0){
-           zhishu=x;
-         }return zhishu;
-     }
-     console.log(getZ(2));
+//   function  sumZ(x){
+//       var zhishu=true;
+//    for(i=2;i<x;i++){
+//        if(x%i==0){
+//                zhishu=false;
+//        }
+//    } return zhishu;
+//   }
+//   console.log(sumZ(8));
+function  sumZ(n){
+      var zhishu=true;
+   for(i=2;i<n;i++){
+       if(n%i==0){
+               zhishu=false;
+       }
+   } return zhishu;
+  }
+  console.log(sumZ(100));
     </script>
 </body>
 
