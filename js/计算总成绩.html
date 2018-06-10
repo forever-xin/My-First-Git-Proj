@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+ </head>
+ <body>
+    <script>//输入人数，并转成数字类型
+
+          var perCount=parseInt(prompt("请输入人数"));
+          //定义数组存储班级的每个人的成绩
+          var perScores =[];
+          //循环的方式录入每个人的成绩
+          for(i=0;i<perCount;i++){
+//把每个人的成绩录入数组中
+       perScores[perScores.length]=parseInt(prompt("输入"+(i+1)+"个人的成绩")); 
+          }
+          console.log(perScores);
+        //求总成绩
+        var sum=0;
+        var svg=0;
+        var min=perScores[0];
+        var max=perScores[0]
+        for(i=0;i<perScores.length;i++){
+            sum+=perScores[i];
+              if(max<perScores[i]){
+                  max=perScores[i];
+              
+              }
+              if(min>perScores[i]){
+                  min=perScores[i];
+              }
+        }
+        console.log(min);
+        console.log(max);
+        svg=sum/perScores.length;
+        console.log(sum);
+        console.log(svg);
+        </script>
+ </body>
+ </html>
