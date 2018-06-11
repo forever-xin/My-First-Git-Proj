@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+      <script>
+           function   funZ(array){
+               var temp;
+                for( var i=0;i<array.length/2;i++){
+                    if( array[i]<array[i+1]){
+                       temp=array[i]
+                  array[i] = array[array.length-1-i];
+                  array[array.length-1-i]=temp;
+                    }
+
+                }return    array;
+
+           }
+        
+           console.log(funZ([1,2,3,4]));
+        </script>
+</body>
+</html>
