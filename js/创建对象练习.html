@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 练习：有一个黄色的小狗，叫大黄今年已经三岁了，250斤，每次走路很慢喜欢吃大骨头
+        var smallDag= new Object();
+        smallDag.name="大黄";
+        smallDag.age=3;
+        smallDag.weigth="250";
+        smallDag.color="黄色";
+        smallDag.eat=function(){
+            console.log("吃大骨头");
+        }
+        smallDag.walk=function(){
+            console.log("走一步");
+        }
+        smallDag.eat();
+        smallDag.walk();
+        var a= smallDag;
+        a.age = 4;
+        console.log(smallDag.age);
+        var b=3;
+        var x=b;
+        x=4;
+        console.log(b);
+        //创建一个手机对象，手机有型号，有颜色可以发短信打电话
+            //    var tpHome=new Object();
+            //    tpHome.number="诺基亚";
+            //    tpHome.color="red";
+            //    tpHome.duanxin =function(){
+            //        console.log("发短信");
+
+            //    };
+            //    tpHome.dianh =function(){
+            //        console.log("打电话");
+
+            //    };
+            //    tpHome.duanxin();
+            //    tpHome.dianh();
+
+
+                  var phome=new Object();
+                  phome.size="i8";
+                  phome.color="red";
+                  phome.duanxin=function(){
+                      console.log("发短信")
+                  };
+                  phome.dianh=function(){
+                      console.log("打电话")
+                  };
+                  phome.dianh();
+                  phome.duanxin();
+        </script>
+</body>
+</html>   
