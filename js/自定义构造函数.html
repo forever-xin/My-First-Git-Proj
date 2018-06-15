@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   //自定义构造函数创建对象我要自己定义一个构造函数，自定义构造函数，创建对象
+   function  Pesone(name,age){
+        this.name=name;
+        this.age=age;
+        this.eat=function(){
+             console.log(this.name+"年龄"+this.age);
+
+        };
+
+   }
+   var obj=new  Pesone("小红",20);
+   console.log(obj.name);
+   console.log(obj.age);
+   obj.eat();
+
+console.log(obj instanceof Pesone);
+
+
+    </script>
+</body>
+</html>

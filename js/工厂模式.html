@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   function   createobj(name,age){
+    //       var obj =new Object();//创建对象
+    //       obj.name=name;//定义属性
+    //       obj.age=age;
+    //       obj.sayHi=function(){
+    //           console.log("你好我叫"+this.name+"我今年"+this.age);
+    //       };
+    //       return obj;
+    //   }
+    // // 创建人的对象
+    // var per1=createobj("小芳",20);
+    // per1.sayHi();
+
+    //  var per2=createobj("小兰",10);
+    // per2.sayHi();
+        function  createobj(name,age){
+            var obj=new Object();
+            obj.age=age;
+            obj.name=name;
+            obj.sayHi=function(){
+                console.log("你好你的名字叫"+obj.name+"我今年"+obj.age);
+            };
+            return  obj;
+        }
+// 创建人的对象
+var per1= createobj("小烦",20);
+per1.sayHi();
+var per2= createobj("小1",10);
+per2.sayHi();
+console.log(obj instanceof Object);
+    </script>
+
+
+
+</body>
+</html>
