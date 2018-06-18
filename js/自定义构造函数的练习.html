@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //通过自定义构造函数实现下面的例子；
+    //创建一个图片的对象，图片有宽，有高，有大小(4m),图片可以展示内容
+    // function  Phto(weight,height,small){
+    //     phto.weight=weight;
+    //     phto.height=height;
+    //     phto.small=small;
+    //     phto.saHi=function(){
+    //         console.log("图片可以展示画画");
+         
+    //     };
+
+    // }
+    // // 创建对象
+    // var obj=new phto(20,150,30);
+    // console.log(phto.weight);
+    // console.log(phto.height);
+    // console.log(phto.small);
+    // phto.saHi();
+//创建一个小猫的对象，猫有颜色体重，年龄，小猫可以抓耗子,可以和狗打架 
+    function Mao(weight,age,color){
+         Mao.weight=weight;
+         Mao.color=color;
+         Mao.age=age;
+         Mao.saHi=function(){
+             console.log("可以抓耗子");
+             console.log("可以和狗打架");
+         };
+    }
+    var obj=new Mao(200,10,"red");
+        console.log(Mao.weight);
+        console.log(Mao.color);
+        console.log(Mao.age);
+        Mao.saHi();
+
+    </script>
+</body>
+</html>
