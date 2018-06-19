@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>这册页面</title>
+    <meta charset="UTF-8"/>
+    
+
+</head>
+<body>
+<div class="top">
+<p>仵淑雅的登陆系统</p>
+</div>
+<form class="box login">
+    <fieldset class="boxBody">
+        <label>用户名</label>
+        <input type="text" placeholder="请输入您的真实姓名" id="username"/>
+        <br>
+        <label>密码</label>
+        <input type="password" placeholder="请输入密码" id="password"/>
+        <br>
+        <label>确认密码</label>
+        <input type="password" placeholder="请输入密码" id="password1"/>
+        <br>
+        <label>生日</label>
+        <input type="text"  id="shengri"/>
+        <br>
+        <label>性别</label>
+        <input type="text"  id="sex"/>
+        <br>
+        <label>身份证号</label>
+        <input type="text"  id="sf"/>
+        <br>
+    </fieldset>
+    <footer>
+        <input type="button" onclick="clicke()" class="btnLogin" value="提交"/>
+    </footer>
+</form>
+
+
+<script>
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    var password1 = document.getElementById("password1");
+   
+    function clicke() {
+        if (username.value == "caihuixin" && password.value == "caihuixin"&&password1.value=="caihuixin") {
+            alert("登陆成功")
+        }
+        else{
+            alert("用户名或密码不正确！")
+        }
+    }
+</script>
+</body>
+</html>

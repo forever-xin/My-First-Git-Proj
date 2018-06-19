@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" type="text/javascript" src="include/jquery-1.7.1.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function (){
+ 
+  $("#btn1").click(function (){
+   //创建一个节点
+    //创建tr
+   var $tr=$("<tr></tr>");
+    //创建一个a连接
+   var $bt=$("<td><a>删除</a></td>");
+   var $li1="<td>"+$("#name").val()+"</td>";
+   var $li2="<td>"+$("#Email").val()+"</td>";
+   var $li3="<td>"+$("#phone").val()+"</td>";
+    //将获取的 name Email phone 的值追加到tr中
+   $tr.append($li1,$li2,$li3,$bt);
+    //将获取的tr 追加到 table中
+   $('#table1').append($tr);
+    //获取 a 连接的属性
+   $("a").attr("href","javascript:void(0)")
+   $("a").click(function(){
+    //定义p1 存储 td
+   var p1=this.parentNode;
+    //定义p2  存储 tr
+   var p2=p1.parentNode;
+    //移除 tr
+   $(p2).remove();
+    });
+  }); 
+ });
+</script>
+</head>
+<body>
+<form id="form1" method="post" style="text-align:center">
+<option>添加用户</option><br />
+<br />
+姓名：<input type="text" id="name" value="" />
+Email:<input type="text" id="Email" value="" />
+电话:<input type="text" id="phone" value="" />
+<br />
+<br />
+<br />
+<input type="button" value="提交" id="btn1" />
+</form>
+<br />
+<br />
+<hr color="#99FFFF" /><br />
+<br />
+<table width="600" border="1" align="center" id="table1">
+  <tr>
+    <td>姓名</td>
+    <td>Email</td>
+    <td>电话</td>
+    <td>操作</td>
+  </tr> 
+</table>
+</body>
+</html>

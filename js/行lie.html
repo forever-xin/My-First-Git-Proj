@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<!--动态生成指定行数和列数的可编辑表格-->
+<style>
+td{
+text-align:center;/*设置单元格样式*/
+width:100px;
+height:30px;
+}
+.inp{
+width:80px;/*设置普通单元格输入框样式*/
+height:26px;
+font-size:10px;
+text-align:center;
+}
+.cap{
+font-size:20px;/*设置表标题输入框样式*/
+text-align:center;
+}
+.tth{
+width:80px;/*设置表格的意第一行的输入框样式*/
+height:26px;
+font-size:12px;
+font-weight:bold;
+text-align:center;
+}
+</style>
+<script>
+function create(row,col,d1){//传递行输入框列输入框和区域
+var rows=row.value;//获取行数值
+var cols=col.value;//获取列数值
+var text1="";
+var text2="";
+var newtable=document.createElement("TABLE");//创建一个table元素
+newtable.setAttribute("frame","border");//设置表格外边框全部显示
+newtable.setAttribute("rules","all");//设置表格内边框全部显示
+for(var j=0;j<cols;j++){//创建普通行的单元格
+text1=text1+"<td><input type=\"text\" class=\"inp\"></td>";
+}
+for(var x=0;x<cols;x++){//创建第一行的单元格
+text2=text2+"<td><input type=\"text\" class=\"tth\"></td>";
+}
+for(var i=0;i<rows;i++){//根据行数循环创建表格
+       var c=newtable.insertRow(newtable.rows.length);
+if(i==0){
+c.innerHTML=text2;//创建第一行
+}
+else{
+c.innerHTML=text1;//创建普通行
+}
+}
+var k=newtable.createCaption();//给表格创建一个标题
+k.innerHTML="<input type=\"text\" class=\"cap\">";//表格标题输入框
+var sor=document.createElement("P");//创建一个P元素在其中放上保存表格按钮和编辑表格按钮
+sor.innerHTML="<input type=\"button\" onclick=\"save()\" value=\"保存表格\">&nbsp&nbsp<input type=\"button\" onclick=\"bianji()\" value=\"编辑表格\">";
+var fil=document.createElement("FIELDSET");//创建一个fieldset元素，将表格和按钮框起来
+var wi=cols*100+20;//根据单元格的设置动态改变外框的大小
+fil.style.width=wi+"px";
+fil.appendChild(newtable);//将表格插入外框中
+fil.appendChild(sor);//将按键插入外框中
+d1.appendChild(fil);//将外框插入文档元素中，使其显示出来
+var inp=document.getElementsByTagName("input");//获取input元素集合
+inp[2].disabled=true;//将创建表格按钮失能
+return false;
+} 
+function save(){//保存表格
+var inp=document.getElementsByTagName("input");//获取input元素集合
+for(var i=3;i<inp.length-2;i++){//将表格的所有input元素只读，同时使外框消失
+inp[i].readOnly=true;
+inp[i].style.borderStyle="none";
+}
+}
+function bianji(){//编辑表格
+var inp=document.getElementsByTagName("input");//获取input元素集合
+for(var i=3;i<inp.length-2;i++){//使表格的input元素恢复可编辑，并显示输入边框
+inp[i].readOnly=false;
+inp[i].style.borderStyle="solid";
+inp[i].style.borderWidth="0.1px";
+}
+}
+</script>
+<meta charset="UTF-8">
+</head>
+<body>
+<div id="d1">
+<form onsubmit="return create(row,col,d1);"><!--使用form可以使得输入框自动检查，省去了再编写脚本的麻烦-->
+<p>请输入行数：<input type="number" id="row" max="100" min="1" required="required" title="行数范围1-100">&nbsp&nbsp&nbsp
+请输入列数：<input type="number" id="col" max="20" min="1" required="required" title="列数范围1-20">&nbsp&nbsp<input type="submit" value="创建表格"></p>
+</form>
+</div>
+</body>
+</html>

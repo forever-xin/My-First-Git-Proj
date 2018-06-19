@@ -718,3 +718,9 @@ var obj =new Object();
 
 ![image-20180616011901438](/var/folders/kj/zbt7qxwn3_zgllkh1r4sfktr0000gn/T/abnerworks.Typora/image-20180616011901438.png)
 
+3.字面量方式创建对象
+
+var obj ={};
+
+
+
