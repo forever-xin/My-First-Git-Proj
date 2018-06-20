@@ -762,7 +762,44 @@ json也是一个对象，数据都是成对出现的，一般json格式的数据
 
 key是一个变量，这个变量中存储的是该对象所有的名字和属性
 
-原始数据类型：number string。boolean indefined null object
+原始数据类型：number string。boolean undefined null object
 
-基本类型（简单类型），值类型
+基本类型（简单类型），值类型：number ，string，boolean
 
+复杂类型（引用类型）：boject
+
+空类型：undefined null
+
+值类型的值在哪一块空间中存储？ 栈
+
+引用类型的值在哪一块空间中存储？ 栈 和堆中存储，对象存储在堆上存储，地址在栈上存储
+
+值类型之间传递的是值
+
+引用类型之间传递的是地址（引用）
+
+值类型作为参数传递的是值
+
+引用类型作为参数传递的就是地址
+
+js中有三种对象：
+
+1.内置对象—js系统自带的对象
+
+2.自定义对象—自己定义的构造函数对象
+
+3.浏览器对象—bom
+
+如何验证是不是一个对象
+
+consonle.log（array instanceof。 object ）
+
+内置对象：math
+
+date
+
+string
+
+array
+
+object

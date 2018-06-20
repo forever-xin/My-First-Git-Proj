@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>  
+<html>  
+<head>  
+<meta charset="utf-8" />  
+<meta name="author" content="@my_coder">  
+<meta name="viewport"  
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">  
+<title>身份证解析</title>  
+<style type="text/css">    
+html {     
+    color: #000;     
+    background: #fff;     
+}     
+    
+body, ul, li, input, h1, button, p {     
+    padding: 0;     
+    margin: 0;     
+}     
+    
+li {     
+    list-style: none;     
+}     
+    
+html {     
+    background: #F6F8FC;     
+    overflow: hidden;     
+}     
+    
+.outer {     
+    margin: 0 auto;     
+    width: 280px;     
+    position: relative;     
+}     
+    
+h1 {     
+    font-size: 20px;     
+    text-align: center;     
+    border-bottom: 1px dotted #A3C4DB;     
+    padding: 10px 0;     
+}     
+    
+p {     
+    font-size: 14px;     
+    padding: 14px 0 10px;     
+}     
+    
+input[type="text"] {     
+    width: 200px;     
+    height: 30px;     
+    font-size: 18px;     
+}     
+    
+.button {     
+    display: inline-block;     
+    width: 60px;     
+    font-size: 16px;     
+    text-align: center;     
+    line-height: 34px;     
+    background: linear-gradient(#fff, #ccc);     
+    border: 1px solid #004;     
+    border-radius: 3px;     
+    cursor: pointer;     
+}     
+    
+ul {     
+    padding-top: 26px;     
+}     
+    
+li {     
+    font-size: 18px;     
+    line-height: 30px;     
+}     
+    
+.error {     
+    position: absolute;     
+    left: 4px;     
+    top: 80px;     
+    color: red;     
+    font-size: 14px;     
+    display: none;     
+}     
+</style>   
+</head>  
+  
+<body>  
+    <div class="outer">  
+        <p>请输入身份证号码</p>  
+        <input type="text"><span class="button">确定</span>  
+        <span class="error">证件号码不规范!</span>  
+        <ul>  
+            <li class="errorMessage"><span></span></li>  
+            <li class="sex">性别: <span></span></li>  
+            <li class="birthday">出生日期: <span></span></li>  
+            <li class="age">年龄: <span></span></li>  
+        </ul>  
+    </div>  
+    <script type="text/javascript" src="lib/jquery/jquery-1.9.1.js"></script>  
+    <script>  
+            function CertificateNoParse(certificateNo){  
+              var pat = /^\d{6}(((19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])\d{3}([0-9]|x|X))|(\d{2}(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])\d{3}))$/;  
+              if(!pat.test(certificateNo))  
+                       return null;  
+          
+              var parseInner = function(certificateNo, idxSexStart, birthYearSpan){  
+                       var res = {};  
+                       var idxSex = 1 - certificateNo.substr(idxSexStart, 1) % 2;  
+                       res.sex = idxSex == '1' ? '女' : '男';  
+          
+                       var year = (birthYearSpan == 2 ? '19' : '') +   
+                                 certificateNo.substr(6, birthYearSpan);  
+                       var month = certificateNo.substr(6 + birthYearSpan, 2);  
+                       var day = certificateNo.substr(8 + birthYearSpan, 2);  
+                       res.birthday = year + '-' + month + '-' + day;  
+                                          
+                       var d = new Date(); //当然，在正式项目中，这里应该获取服务器的当前时间  
+                       var monthFloor = ((d.getMonth()+1) < parseInt(month,10) || (d.getMonth()+1) == parseInt(month,10) && d.getDate() < parseInt(day,10)) ? 1 : 0;  
+                       res.age = d.getFullYear() - parseInt(year,10) - monthFloor;  
+                       return res;  
+              };  
+          
+              return parseInner(certificateNo, certificateNo.length == 15 ? 14 : 16, certificateNo.length == 15 ? 2 : 4);  
+        };  
+          
+        //点击查询     
+        $('.button').click(function(){  
+            var certificateNo = $('input[type=text]').val();     
+            if (certificateNo) {     
+                var res = CertificateNoParse(certificateNo);  
+                if(res) {  
+                    $('.error').css('display', 'none');  
+                    $(".sex span").html(res.sex);  
+                    $(".birthday span").html(res.birthday);  
+                    $(".age span").html(res.age);  
+                }else {  
+                    $('li span').html('');  
+                    $('.error').css('display', 'block');  
+                }  
+            }  
+        });     
+    </script>  
+</body>  
+</html>  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>仵淑雅</title>
+<script type="text/javascript"> 
+function discriCard(UUserCard)
+{ 
+UUserCard.substring(6,10)+"-"+UUserCard.substring(10,12)+"-"+UUserCard.substring(12,14); 
+//获取性别 
+if(parseInt(UUserCard.substr(16,1))%2==1) 
+{ 
+alert("男"); 
+//是男则执行代码 ... 
+} 
+else
+{ 
+alert("女"); 
+//是女则执行代码 ... 
+} 
+//获取年龄 
+var myDate = new Date(); 
+var month = myDate.getMonth() + 1; 
+var day = myDate.getDate(); 
+var age = myDate.getFullYear()-UUserCard.substring(6, 10) - 1; 
+if (UUserCard.substring(10,12)<month||UUserCard.substring(10,12)==month&&UUserCard.substring(12,14)<=day) 
+{ 
+age++; 
+} 
+alert(age); 
+alert(month);
+//年龄 age 
+} 
+window.onload=function()
+{
+var txt=document.getElementById("txt");
+var bt=document.getElementById("bt");
+bt.onclick=function(){discriCard(txt.value);}
+}
+</script>
+</head>
+<body>
+<input type="text" id="txt" />
+<input type="button" value="点击获取生日和性别" id="bt" />
+</body>
+</html>
