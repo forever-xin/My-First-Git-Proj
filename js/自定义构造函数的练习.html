@@ -37,11 +37,14 @@
          };
     }
     var obj=new Mao(200,10,"red");
+             obj["color"]="green";
         console.log(Mao.weight);
-        console.log(Mao.color);
+        // console.log(obj.color);
+        console.log(obj["color"]);
         console.log(Mao.age);
-        Mao.saHi();
+        // Mao.saHi();
 
+   Mao["saHi"]();
     </script>
 </body>
 </html>
