@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           function  Mymath(){
+               this.getmax=function(){
+                   var max=arguments[0];
+            for(i=0;i<arguments.length;i++){
+                if(arguments[i]>max){
+                     max=arguments[i];
+                }
+            }return max;
+                    
+               };
+           }
+               var mt=new Mymath();
+               var ruslut=mt.getmax(1,2,3,4,5);
+               console.log(ruslut);
+              
+        
+        </script>
+</body>
+</html>
