@@ -1,0 +1,50 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Simple Login Form</title>
+    <meta charset="UTF-8"/>
+    <meta name="Designer" content="PremiumPixels.com">
+    <meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+  <style>
+       .boxBody{ 
+		   width: 200px;
+		   margin: 0 auto;
+		   margin-top: 200px;
+	   }
+	  
+	  
+  </style>
+
+</head>
+<body>
+<div class="top">
+
+</div>
+<form class="box login">
+    <fieldset class="boxBody">
+		<p>登陆</p>
+        <label>账号</label>
+		<input type="text" placeholder="请输入账号" id="username"/>
+		<br>
+        <label>密码</label>
+		<input type="password" placeholder="请输入密码" id="password"/>
+		<input type="button" onclick="clicke()" class="btnLogin" value="登陆"/>
+    </fieldset>
+  
+</form>
+
+<script>
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    function clicke() {
+        if (username.value == "wushuya" && password.value == "wushuya") {
+            window.location.href='index.html';
+        }
+        else{
+            alert("用户名或密码不正确！")
+        }
+    }
+</script>
+</body>
+</html>
