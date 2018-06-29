@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // .length字符串的长度
+    // .chaAt(索引),返回值制定的索引位置的字符串，超出的索引，结果是空字符串
+        // 实例对象---必须通过new的方式创建的对象（实例对象）来调用的方法
+        // 静态方法--直接通过大写的构造函数的名字调用的方法（直接通过大写的对象名字调用）
+        // indexof要找的字符串，从某个位置的索引开始的索引；返回的是这个字符串的索引值，没找到则返回-1
+        // .lastIndexOf(要找的字符串);从后向前找，但是索引还是从左往右的方式，找不到则返回-1
+            // .replace("原来的字符串","新的字符串");用来替换字符串
+        // var str=String.fromCharCode(106);//srcll值
+        // console.log(str);
+    // var str="小苏";
+    // console.log(str.concat("喜欢","凤姐"));
+    // var str="小苏";
+    // console.log(str.concat("喜欢","凤姐"));
+    // var str="小苏你好漂亮"
+    // var   index=str.indexOf("苏");
+    // console.log(index);
+    //   var str ='小苏你好漂亮啊';
+    //   var index=str .lastIndexOf("苏");//从后往前数的但是索引是从前往后
+    //   console.log(index);
+    //  var str ="小苏你好美哦";
+    //  if(str.indexOf("美")!=-1){
+    //       str=str.replace("1","猥琐");
+    //  }else{
+    //         console.log("补存在");
+    //  }
+    //  console.log(str);
+    var str ="abcdefg";
+    //从索引1的位置开始提取，到索引为5的前一位，没有5，并返回提取后的字符串
+    str=str.slice(1,5);
+    console.log(str);
+    </script>
+    
+</body>
+</html>

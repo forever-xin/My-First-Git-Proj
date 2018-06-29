@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   let obj={
+    //       a:1,
+    //       b:{c:2,d:3}
+    //   }
+    //   let objCache ={ obj}
+    //   let objCopy= Object.assign({},obj)
+    //   let objCopy2=JSON.parse(JSON.stringify(obj))
+    //   obj.a=4
+    //   obj.b.c=5
+    //   console.log(objCache.obj.a)
+    //   console.log(objCache.obj.b.c)
+    //   console.log(objCopy.a)
+    //   console.log(objCopy.b.c)
+    //   console.log(objCopy2.a)  
+    //   console.log(objCopy2.b.c)
+  
+	
+   function Foo() {
+   	getName =function(){
+   		console.log(1);
+   	}
+    return this;
+   }
+   Foo.getName=function(){
+   	console.log(2)
+   }
+   Foo.prototype.getName=function(){
+   	console.log(3)
+   }
+   let getName = function(){
+   	console.log(4)
+   }
+   function getName(){
+   	console.log(5)
+   }
+   Foo.getName();getName();
+   Foo().getName();getName();
+   new Foo.getName();
+   new Foo().getName();
+   new new Foo().getName();
+
+
+</script>
+ 
+
+
+</body>
+</html>
+ 

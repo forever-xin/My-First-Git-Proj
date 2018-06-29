@@ -19,7 +19,19 @@
             console.log("我是"+this.name);
         };
         obj.sayHi();
+    //优化后的写法 
+    var obj2={
+        name:"小明",
+        age:10,
+        sayHi:function(){
+            console.log("我是"+this.name);
 
+        },
+        eat:function(){
+            console.log("吃了");
+        },
+
+    };
 
 
       
